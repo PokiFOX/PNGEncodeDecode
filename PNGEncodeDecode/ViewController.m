@@ -28,6 +28,8 @@
 	UITapGestureRecognizer *labelTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(OnClick_LabelHelp:)];
 	[_Label_Help addGestureRecognizer:labelTapGestureRecognizer];
 	_Label_Help.hidden = YES;
+	
+	_Input_Detail.delegate = self;
 }
 
 - (IBAction)OnChanged_ShowPwd:(id)sender
@@ -164,6 +166,14 @@
 - (void) OnClick_LabelHelp:(UITapGestureRecognizer*)recognizer
 {
 	_Label_Help.hidden = YES;
+}
+
+- (BOOL)textView:(UITextView*)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text
+{
+	if ([text isEqualToString:@"\n"]) {
+		[_Input_Detail resignFirstResponder];
+	}
+	return YES;
 }
 
 @end

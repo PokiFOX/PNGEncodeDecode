@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UISwitch* ShowPwd;
 @property (weak, nonatomic) IBOutlet UITextField* Input_Key;
 @property (weak, nonatomic) IBOutlet UITextView* Input_Detail;
 @property (weak, nonatomic) IBOutlet UILabel* Label_Help;
 
 @end
-
