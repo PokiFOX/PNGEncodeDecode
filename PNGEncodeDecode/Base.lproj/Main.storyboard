@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKg-Rl-fGf" userLabel="Help">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4IM-3Z-V0r"/>
+                                    <constraint firstAttribute="width" constant="30" id="vjQ-FS-AGO"/>
+                                </constraints>
+                                <state key="normal" image="questionmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="OnClick_Help:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK7-sx-h09"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1F-7V-1sx">
+                                <rect key="frame" x="70" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Egg-fA-N2M"/>
+                                    <constraint firstAttribute="width" constant="30" id="syg-U6-sD0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geH-RU-xtO" userLabel="Key_Input">
+                                <rect key="frame" x="120" y="20" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xCA-XT-DR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <connections>
+                                    <action selector="DidEndOnExit_Key:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="fpl-HS-306"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8pt-a5-CBx" userLabel="ShowPwd">
+                                <rect key="frame" x="250" y="20" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9Lj-tc-sqG"/>
+                                    <constraint firstAttribute="height" constant="30" id="qGH-5I-bZn"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnChanged_ShowPwd:" destination="BYZ-38-t0r" eventType="valueChanged" id="GRH-EZ-2yl"/>
+                                </connections>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NC4-0f-Wmc" userLabel="Detail">
+                                <rect key="frame" x="20" y="70" width="280" height="428"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2H-CS-id5" userLabel="Export">
+                                <rect key="frame" x="20" y="518" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LD4-i4-xFc"/>
+                                    <constraint firstAttribute="height" constant="30" id="WHU-fU-yjg"/>
+                                </constraints>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="OnClick_Export:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75e-UA-ije"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-Sg-hOq" userLabel="Import">
+                                <rect key="frame" x="200" y="518" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wu6-I8-xeq"/>
+                                    <constraint firstAttribute="width" constant="100" id="weg-fi-FmQ"/>
+                                </constraints>
+                                <state key="normal" title="Import"/>
+                                <connections>
+                                    <action selector="OnClick_Import:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L44-dt-9Ad"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-Sf-geJ" userLabel="HelpText">
+                                <rect key="frame" x="50" y="100" width="220" height="368"/>
+                                <string key="text">1.Input secure key and text, then click export to save a QR code image in album.
+2.Input key then click import a QR code image from album or camera, then  the orginal text will be shown.
+3.No network access.
+4.No cache.
+5.https://github.com/PokiFOX/PNGEncodeDecode/</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="top" secondItem="iKg-Rl-fGf" secondAttribute="bottom" constant="20" id="2Tb-JB-j8s"/>
+                            <constraint firstItem="geH-RU-xtO" firstAttribute="leading" secondItem="W1F-7V-1sx" secondAttribute="trailing" constant="20" id="3Ib-vr-Aqg"/>
+                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="OYH-Sf-geJ" secondAttribute="bottom" constant="50" id="AT4-p4-SL1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OYH-Sf-geJ" secondAttribute="trailing" constant="50" id="BJC-D6-St0"/>
+                            <constraint firstItem="iKg-Rl-fGf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FMf-pn-nZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pt-a5-CBx" secondAttribute="trailing" constant="20" id="GHw-gb-FBi"/>
+                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="NC4-0f-Wmc" secondAttribute="bottom" constant="20" id="JiA-Gs-Aiq"/>
+                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MvQ-kU-Tbs"/>
+                            <constraint firstItem="W1F-7V-1sx" firstAttribute="leading" secondItem="iKg-Rl-fGf" secondAttribute="trailing" constant="20" id="PQp-wY-aG6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Jn-Sg-hOq" secondAttribute="bottom" constant="20" id="Pp3-1B-Rjh"/>
+                            <constraint firstItem="b2H-CS-id5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QaK-hf-Yx3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2H-CS-id5" secondAttribute="bottom" constant="20" id="XBf-W7-Veb"/>
+                            <constraint firstItem="geH-RU-xtO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aiC-wo-QgU"/>
+                            <constraint firstItem="8pt-a5-CBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dgr-Md-n0D"/>
+                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="top" secondItem="W1F-7V-1sx" secondAttribute="bottom" constant="50" id="f72-3e-LKf"/>
+                            <constraint firstItem="8pt-a5-CBx" firstAttribute="leading" secondItem="geH-RU-xtO" secondAttribute="trailing" constant="20" id="jp4-vG-SoZ"/>
+                            <constraint firstItem="W1F-7V-1sx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="plY-zo-Vem"/>
+                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qoI-ml-o2X"/>
+                            <constraint firstItem="iKg-Rl-fGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uIV-W3-Efe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC4-0f-Wmc" secondAttribute="trailing" constant="20" id="uL9-Ev-qwS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Jn-Sg-hOq" secondAttribute="trailing" constant="20" id="zxS-3s-v0m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Input_Detail" destination="NC4-0f-Wmc" id="QDh-FT-WzU"/>
+                        <outlet property="Input_Key" destination="geH-RU-xtO" id="8zB-F5-y3H"/>
+                        <outlet property="Label_Help" destination="OYH-Sf-geJ" id="M8K-6H-Cis"/>
+                        <outlet property="ShowPwd" destination="8pt-a5-CBx" id="XWd-Ue-dbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.625" y="124.64788732394366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="questionmark.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDE2C25323EFC0510036506A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C25223EFC0510036506A /* AppDelegate.m */; };
+		EDE2C25623EFC0510036506A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C25523EFC0510036506A /* SceneDelegate.m */; };
+		EDE2C25923EFC0510036506A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C25823EFC0510036506A /* ViewController.m */; };
+		EDE2C25C23EFC0510036506A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C25A23EFC0510036506A /* Main.storyboard */; };
+		EDE2C25E23EFC06D0036506A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C25D23EFC06D0036506A /* Assets.xcassets */; };
+		EDE2C26123EFC06E0036506A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE2C25F23EFC06E0036506A /* LaunchScreen.storyboard */; };
+		EDE2C26423EFC06E0036506A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C26323EFC06E0036506A /* main.m */; };
+		EDE2C26F23EFE3A20036506A /* AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2C26D23EFE3A10036506A /* AES256.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDE2C24E23EFC0510036506A /* 文本转二维码.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "文本转二维码.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE2C25123EFC0510036506A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EDE2C25223EFC0510036506A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EDE2C25423EFC0510036506A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EDE2C25523EFC0510036506A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EDE2C25723EFC0510036506A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EDE2C25823EFC0510036506A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EDE2C25B23EFC0510036506A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDE2C25D23EFC06D0036506A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE2C26023EFC06E0036506A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDE2C26223EFC06E0036506A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE2C26323EFC06E0036506A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDE2C26D23EFE3A10036506A /* AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES256.m; sourceTree = "<group>"; };
+		EDE2C26E23EFE3A20036506A /* AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES256.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE2C24B23EFC0510036506A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDE2C24523EFC0510036506A = {
+			isa = PBXGroup;
+			children = (
+				EDE2C25023EFC0510036506A /* PNGEncodeDecode */,
+				EDE2C24F23EFC0510036506A /* Products */,
+				EDE2C28623EFF6910036506A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE2C24F23EFC0510036506A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2C24E23EFC0510036506A /* 文本转二维码.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE2C25023EFC0510036506A /* PNGEncodeDecode */ = {
+			isa = PBXGroup;
+			children = (
+				EDE2C26E23EFE3A20036506A /* AES256.h */,
+				EDE2C26D23EFE3A10036506A /* AES256.m */,
+				EDE2C25123EFC0510036506A /* AppDelegate.h */,
+				EDE2C25223EFC0510036506A /* AppDelegate.m */,
+				EDE2C25423EFC0510036506A /* SceneDelegate.h */,
+				EDE2C25523EFC0510036506A /* SceneDelegate.m */,
+				EDE2C25723EFC0510036506A /* ViewController.h */,
+				EDE2C25823EFC0510036506A /* ViewController.m */,
+				EDE2C25A23EFC0510036506A /* Main.storyboard */,
+				EDE2C25D23EFC06D0036506A /* Assets.xcassets */,
+				EDE2C25F23EFC06E0036506A /* LaunchScreen.storyboard */,
+				EDE2C26223EFC06E0036506A /* Info.plist */,
+				EDE2C26323EFC06E0036506A /* main.m */,
+			);
+			path = PNGEncodeDecode;
+			sourceTree = "<group>";
+		};
+		EDE2C28623EFF6910036506A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE2C24D23EFC0510036506A /* PNGEncodeDecode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE2C26723EFC06E0036506A /* Build configuration list for PBXNativeTarget "PNGEncodeDecode" */;
+			buildPhases = (
+				EDE2C24A23EFC0510036506A /* Sources */,
+				EDE2C24B23EFC0510036506A /* Frameworks */,
+				EDE2C24C23EFC0510036506A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PNGEncodeDecode;
+			productName = PNGEncodeDecode;
+			productReference = EDE2C24E23EFC0510036506A /* 文本转二维码.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE2C24623EFC0510036506A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Wei WEI";
+				TargetAttributes = {
+					EDE2C24D23EFC0510036506A = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = EDE2C24923EFC0510036506A /* Build configuration list for PBXProject "PNGEncodeDecode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDE2C24523EFC0510036506A;
+			productRefGroup = EDE2C24F23EFC0510036506A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE2C24D23EFC0510036506A /* PNGEncodeDecode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE2C24C23EFC0510036506A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE2C26123EFC06E0036506A /* LaunchScreen.storyboard in Resources */,
+				EDE2C25E23EFC06D0036506A /* Assets.xcassets in Resources */,
+				EDE2C25C23EFC0510036506A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE2C24A23EFC0510036506A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE2C25923EFC0510036506A /* ViewController.m in Sources */,
+				EDE2C26F23EFE3A20036506A /* AES256.m in Sources */,
+				EDE2C25323EFC0510036506A /* AppDelegate.m in Sources */,
+				EDE2C26423EFC06E0036506A /* main.m in Sources */,
+				EDE2C25623EFC0510036506A /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDE2C25A23EFC0510036506A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE2C25B23EFC0510036506A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDE2C25F23EFC06E0036506A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE2C26023EFC06E0036506A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDE2C26523EFC06E0036506A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EDE2C26623EFC06E0036506A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE2C26823EFC06E0036506A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZS937PKRJY;
+				INFOPLIST_FILE = PNGEncodeDecode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNGEncodeDecode",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pubaobei.pngencodedecode;
+				PRODUCT_NAME = "文本转二维码";
+				PROVISIONING_PROFILE_SPECIFIER = distribution_pngencodedecode;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EDE2C26923EFC06E0036506A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZS937PKRJY;
+				INFOPLIST_FILE = PNGEncodeDecode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNGEncodeDecode",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pubaobei.pngencodedecode;
+				PRODUCT_NAME = "文本转二维码";
+				PROVISIONING_PROFILE_SPECIFIER = distribution_pngencodedecode;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE2C24923EFC0510036506A /* Build configuration list for PBXProject "PNGEncodeDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE2C26523EFC06E0036506A /* Debug */,
+				EDE2C26623EFC06E0036506A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE2C26723EFC06E0036506A /* Build configuration list for PBXNativeTarget "PNGEncodeDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE2C26823EFC06E0036506A /* Debug */,
+				EDE2C26923EFC06E0036506A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDE2C24623EFC0510036506A /* Project object */;
+}
