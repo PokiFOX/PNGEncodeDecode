@@ -45,10 +45,35 @@
 - (IBAction)OnClick_Export:(id)sender
 {
 	NSString* str_key = self.Input_Key.text;
-	while (str_key.length < 32) {
+	if (str_key.length == 0) {
+		UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Please input key! max length:32" message:@"Error." preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}];
+		[alertController addAction:defaultAction];
+		[self presentViewController:alertController animated:YES completion:nil];
+		return;
+	}
+	
+	NSString* str_detail = self.Input_Detail.text;
+	if (str_detail.length == 0) {
+		UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Please input text!" message:@"Error." preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}];
+		[alertController addAction:defaultAction];
+		[self presentViewController:alertController animated:YES completion:nil];
+		return;
+	}
+	const char* str_text = [str_detail UTF8String];
+	if (strlen(str_text) > 1024) {
+		UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"max text length:1024!" message:@"Error." preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}];
+		[alertController addAction:defaultAction];
+		[self presentViewController:alertController animated:YES completion:nil];
+		return;
+	}
+
+	while (str_key.length < KeyLength) {
 		str_key = [str_key stringByAppendingString:@" "];
 	}
-	NSData* detail = [self.Input_Detail.text dataUsingEncoding:NSUTF8StringEncoding];
+	NSData* detail = [str_detail dataUsingEncoding:NSUTF8StringEncoding];
 	NSData* encode = [detail aes256_encrypt:str_key];
 	NSString* base64str = [encode base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
 	NSData* base64 = [base64str dataUsingEncoding:NSUTF8StringEncoding];
@@ -56,7 +81,7 @@
 	[filter setDefaults];
 	[filter setValue:base64 forKey:@"inputMessage"];
 	CIImage* outputImage = [filter outputImage];
-	UIImage* image = [self createNonInterpolatedUIImageFormCIImage:outputImage withSize:256];
+	UIImage* image = [self createNonInterpolatedUIImageFormCIImage:outputImage withSize:ImageSize];
 	UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Save" message:@"Finish." preferredStyle:UIAlertControllerStyleAlert];
 	UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}];
@@ -87,6 +112,16 @@
 
 - (IBAction)OnClick_Import:(id)sender
 {
+	NSString* str_key = self.Input_Key.text;
+
+	if (str_key.length == 0) {
+		UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Please input key! max length:32" message:@"Error." preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}];
+		[alertController addAction:defaultAction];
+		[self presentViewController:alertController animated:YES completion:nil];
+		return;
+	}
+
 	UIAlertController* alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 	
 	UIAlertAction* albumAction = [UIAlertAction actionWithTitle:@"Album" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -120,7 +155,7 @@
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info
 {
 	NSString* str_key = self.Input_Key.text;
-	while (str_key.length < 32) {
+	while (str_key.length < KeyLength) {
 		str_key = [str_key stringByAppendingString:@" "];
 	}
 	if (![[info objectForKey:UIImagePickerControllerMediaType] isEqualToString:@"public.image"]) return;

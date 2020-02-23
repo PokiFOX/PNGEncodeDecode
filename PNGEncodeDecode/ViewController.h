@@ -16,3 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel* Label_Help;
 
 @end
+
+const int ImageSize = 512;
+const int KeyLength = 32;
