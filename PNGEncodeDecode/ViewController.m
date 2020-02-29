@@ -42,6 +42,14 @@
 	}
 }
 
+- (IBAction)OnClick_ClearKey:(id)sender {
+	_Input_Key.text = @"";
+}
+
+- (IBAction)OnClick_ClearText:(id)sender {
+	_Input_Detail.text = @"";
+}
+
 - (IBAction)OnClick_Export:(id)sender
 {
 	NSString* str_key = self.Input_Key.text;

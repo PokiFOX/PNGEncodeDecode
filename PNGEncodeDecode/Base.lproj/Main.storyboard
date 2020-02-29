@@ -58,8 +58,19 @@
                                     <action selector="OnChanged_ShowPwd:" destination="BYZ-38-t0r" eventType="valueChanged" id="GRH-EZ-2yl"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQY-2B-3nF" userLabel="ClearKey">
+                                <rect key="frame" x="20" y="60" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="neN-eQ-mUw"/>
+                                    <constraint firstAttribute="height" constant="30" id="vqL-7g-IEz"/>
+                                </constraints>
+                                <state key="normal" title="Clear Key"/>
+                                <connections>
+                                    <action selector="OnClick_ClearKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOT-IG-4na"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NC4-0f-Wmc" userLabel="Detail">
-                                <rect key="frame" x="20" y="70" width="280" height="428"/>
+                                <rect key="frame" x="20" y="110" width="280" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -88,7 +99,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYH-Sf-geJ" userLabel="HelpText">
-                                <rect key="frame" x="50" y="100" width="220" height="368"/>
+                                <rect key="frame" x="50" y="140" width="220" height="328"/>
                                 <string key="text">1.Input key and text, then click export to save a QR code image in album.
 2.Input key and import a QR code image from album or camera, then the orginal text will be shown.
 3.No network access.
@@ -98,29 +109,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-YN-bz8" userLabel="ClearText">
+                                <rect key="frame" x="200" y="60" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bag-Va-VOk"/>
+                                    <constraint firstAttribute="width" constant="100" id="Lm3-sQ-LMB"/>
+                                </constraints>
+                                <state key="normal" title="Clear Text"/>
+                                <connections>
+                                    <action selector="OnClick_ClearText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZF-e5-Gf1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="top" secondItem="iKg-Rl-fGf" secondAttribute="bottom" constant="20" id="2Tb-JB-j8s"/>
+                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="top" secondItem="bQY-2B-3nF" secondAttribute="bottom" constant="20" id="1BM-sH-evR"/>
                             <constraint firstItem="geH-RU-xtO" firstAttribute="leading" secondItem="W1F-7V-1sx" secondAttribute="trailing" constant="20" id="3Ib-vr-Aqg"/>
-                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="OYH-Sf-geJ" secondAttribute="bottom" constant="50" id="AT4-p4-SL1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OYH-Sf-geJ" secondAttribute="trailing" constant="50" id="BJC-D6-St0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC4-0f-Wmc" secondAttribute="trailing" constant="20" id="B5Q-oR-Wfq"/>
                             <constraint firstItem="iKg-Rl-fGf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FMf-pn-nZA"/>
+                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G9A-gx-fbS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pt-a5-CBx" secondAttribute="trailing" constant="20" id="GHw-gb-FBi"/>
-                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="NC4-0f-Wmc" secondAttribute="bottom" constant="20" id="JiA-Gs-Aiq"/>
-                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MvQ-kU-Tbs"/>
+                            <constraint firstItem="bQY-2B-3nF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lae-KT-WRn"/>
+                            <constraint firstItem="bQY-2B-3nF" firstAttribute="top" secondItem="W1F-7V-1sx" secondAttribute="bottom" constant="10" id="NHd-fL-nxw"/>
                             <constraint firstItem="W1F-7V-1sx" firstAttribute="leading" secondItem="iKg-Rl-fGf" secondAttribute="trailing" constant="20" id="PQp-wY-aG6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Jn-Sg-hOq" secondAttribute="bottom" constant="20" id="Pp3-1B-Rjh"/>
                             <constraint firstItem="b2H-CS-id5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QaK-hf-Yx3"/>
+                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="top" secondItem="bQY-2B-3nF" secondAttribute="bottom" constant="50" id="RQc-d6-8xw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2H-CS-id5" secondAttribute="bottom" constant="20" id="XBf-W7-Veb"/>
                             <constraint firstItem="geH-RU-xtO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aiC-wo-QgU"/>
                             <constraint firstItem="8pt-a5-CBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dgr-Md-n0D"/>
-                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="top" secondItem="W1F-7V-1sx" secondAttribute="bottom" constant="50" id="f72-3e-LKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRa-YN-bz8" secondAttribute="trailing" constant="20" id="hVC-Fn-bfz"/>
                             <constraint firstItem="8pt-a5-CBx" firstAttribute="leading" secondItem="geH-RU-xtO" secondAttribute="trailing" constant="20" id="jp4-vG-SoZ"/>
+                            <constraint firstItem="OYH-Sf-geJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="n9V-bT-x7s"/>
                             <constraint firstItem="W1F-7V-1sx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="plY-zo-Vem"/>
-                            <constraint firstItem="NC4-0f-Wmc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qoI-ml-o2X"/>
+                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="OYH-Sf-geJ" secondAttribute="bottom" constant="50" id="tpn-l1-Zlg"/>
                             <constraint firstItem="iKg-Rl-fGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uIV-W3-Efe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC4-0f-Wmc" secondAttribute="trailing" constant="20" id="uL9-Ev-qwS"/>
+                            <constraint firstItem="b2H-CS-id5" firstAttribute="top" secondItem="NC4-0f-Wmc" secondAttribute="bottom" constant="20" id="ujh-nC-841"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OYH-Sf-geJ" secondAttribute="trailing" constant="50" id="vB7-8h-vdO"/>
+                            <constraint firstItem="gRa-YN-bz8" firstAttribute="top" secondItem="geH-RU-xtO" secondAttribute="bottom" constant="10" id="vR6-9U-VR1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Jn-Sg-hOq" secondAttribute="trailing" constant="20" id="zxS-3s-v0m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
